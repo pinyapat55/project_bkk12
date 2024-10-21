@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปที่ CSS ไฟล์หลักของคุณ -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* เปลี่ยนพื้นหลังเป็นสีขาว */
+        }
+
+        /* Main container */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header section */
+        header {
+            background-color: #7a0707;
+            padding: 30px 0;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #f0e9e9;
+        }
+
+        /* Content section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .about-section {
+            background-color: white;
+            width: calc(50% - 40px);
+            margin: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-section img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .about-section p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ปุ่มกลับไปหน้าหลัก */
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .home-button {
+            background-color: #7a0707;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #b30d0d; /* เปลี่ยนสีเมื่อเลื่อนเมาส์ */
+        }
+
+        /* Footer section */
+        footer {
+            background-color: #7a0707;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>About Us</h1>
+        <p>ยินดีต้อนรับสู่หน้าเกี่ยวกับเรา</p>
+    </header>
+
+    <div class="about-container">
+        <div class="about-content">
+            <!-- Section 1: Our Mission -->
+            <div class="about-section">
+                <img src="images/โปสเตอร์.jpg" alt="Our Mission">
+                <h2>Our Mission</h2>
+                <p>เรามีเป้าหมายที่จะนำเสนอประสบการณ์ท่องเที่ยวที่ดีที่สุดให้กับคุณ ไม่ว่าคุณจะเป็นนักท่องเที่ยวในประเทศหรือต่างชาติ 
+                กรุงเทพฯ เต็มไปด้วยเสน่ห์และสถานที่ที่น่าตื่นตาตื่นใจที่เราพร้อมแนะนำ.</p>
+            </div>
+
+            <!-- Section 2: Who We Are -->
+            <div class="about-section">
+                <img src="images/โปส.jpg" alt="Our Team">
+                <h2>Who We Are</h2>
+                <p>เราเป็นทีมงานผู้ที่หลงใหลในการท่องเที่ยวและรักในการสร้างประสบการณ์ท่องเที่ยวที่น่าจดจำ 
+                ทีมของเรารวมเอาผู้เชี่ยวชาญในด้านเทคโนโลยีและการท่องเที่ยวเพื่อสร้างแพลตฟอร์มที่น่าสนใจและมีประโยชน์สำหรับทุกคน.</p>
+            </div>
+
+            <!-- Section 3: Our Vision -->
+            <div class="about-section">
+                <img src="images/เตอร์.jpg" alt="Our Vision">
+                <h2>Our Vision</h2>
+                <p>เรามุ่งหวังที่จะเป็นแหล่งข้อมูลที่สำคัญและมีประสิทธิภาพในการแนะนำสถานที่ท่องเที่ยวต่าง ๆ 
+                ด้วยการผสมผสานเทคโนโลยี AR/VR เพื่อให้การท่องเที่ยวกลายเป็นเรื่องง่ายและสนุกยิ่งขึ้น.</p>
+            </div>
+
+            <!-- Section 4: Contact Us -->
+            <div class="about-section">
+                <img src="images/contact.jpg" alt="Contact Us">
+                <h2>Contact Us</h2>
+                <p>หากคุณต้องการข้อมูลเพิ่มเติมหรือมีข้อสงสัยเกี่ยวกับบริการของเรา 
+                สามารถติดต่อเราผ่านทางอีเมลหรือเบอร์โทรศัพท์ เรายินดีให้บริการทุกเมื่อ.</p>
+            </div>
+        </div>
+        <!-- ปุ่มกลับไปหน้าหลัก -->
+        <div class="back-to-home">
+            <a href="index.html" class="home-button">กลับไปหน้าหลัก</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Bangkok Tourism. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

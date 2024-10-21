@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้สไตล์เดียวกับหน้าอื่น -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/tahi.jpg'); /* เปลี่ยนเป็นที่อยู่ของรูปพื้นหลังที่ต้องการ */
+            background-size: cover; /* ทำให้รูปพื้นหลังเต็มหน้าจอ */
+            background-position: center; /* จัดตำแหน่งรูปให้ตรงกลาง */
+            color: white; /* เปลี่ยนสีตัวอักษรให้เข้ากับพื้นหลัง */
+            text-align: center;
+            height: 100vh; /* ความสูงเต็มหน้าจอ */
+            display: flex; /* ใช้ Flexbox เพื่อจัดเรียงให้กลาง */
+            justify-content: center; /* จัดกลางแนวตั้ง */
+            align-items: center; /* จัดกลางแนวนอน */
+            flex-direction: column; /* จัดเรียงแนวตั้ง */
+            position: relative; /* ตั้งค่าตำแหน่งให้เป็น relative เพื่อให้ฟุตเตอร์อยู่ในตำแหน่งที่เหมาะสม */
+        }
+
+        button {
+            background-color: #6b0b06; /* สีพื้นหลังของปุ่ม */
+            color: white; /* สีตัวอักษร */
+            padding: 15px 30px; /* ขนาดของปุ่ม */
+            border: none; /* ไม่แสดงกรอบ */
+            border-radius: 5px; /* มุมปุ่มโค้ง */
+            cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ที่ปุ่ม */
+            font-size: 1.5em; /* ขนาดตัวอักษร */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* เอฟเฟกต์เปลี่ยนสี */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาของปุ่ม */
+        }
+
+        button:hover {
+            background-color: #45a049; /* สีเมื่อวางเมาส์เหนือปุ่ม */
+            transform: scale(1.05); /* ขยายขนาดปุ่มเล็กน้อย */
+        }
+
+        footer {
+            position: fixed; /* ตั้งค่าให้ติดล่างสุด */
+            bottom: 0; /* ให้ฟุตเตอร์อยู่ที่ด้านล่าง */
+            width: 100%; /* ความกว้างเต็ม */
+            text-align: center; /* จัดตำแหน่งข้อความกลาง */
+            color: black; /* เปลี่ยนสีข้อความให้เป็นสีดำเพื่อให้ตัดกับพื้นหลัง */
+            padding: 10px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
+            background-color: #f0aa05; /* พื้นหลังสีเหลืองทึบ */
+        }
+    </style>
+</head>
+<body>
+    <p>กดปุ่มด้านล่างเพื่อเริ่มต้นการสำรวจกรุงเทพมหานคร!</p>
+    <button onclick="navigateTo('index.html')">Get Start</button> <!-- เปลี่ยนเป็นชื่อไฟล์หน้าหลักของคุณ -->
+
+    <footer>
+        <p>© 2024 Bangkok Tourism. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navigation function
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
