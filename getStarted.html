@@ -182,11 +182,18 @@
         /* Style for map image */
     #mapImage {
     width: 100%; /* Make map image responsive */
-    height: 600px; /* Set desired height */
+    height: 800px; /* Set desired height */
     object-fit: contain; /* Preserve aspect ratio */
     margin: 20px auto; /* Center the image */
     display: block; /* Ensure it's a block element */
 }
+    #newImage {
+            max-width: 100%; /* ไม่ให้ภาพใหญ่กว่า 100% ของพื้นที่ */
+            height: 900px; /* ปรับความสูงให้เป็นอัตโนมัติเพื่อรักษาสัดส่วน */
+            object-fit: contain; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เปลี่ยนสัดส่วน */
+            margin: 0; /* จัดให้อยู่กลาง */
+            display: block; /* ให้แสดงเป็น block element */
+        }
 
     </style>
 </head>
@@ -299,6 +306,9 @@
         </div>
          <!-- Add map image here -->
          <img id="mapImage" src="images/Map.png" alt="แผนที่กรุงเทพมหานคร">
+         <img id="newImage" src="images/Model5.png" alt="โมเดล">
+         <img id="newImage" src="images/Model2.png" alt="โมเดล">
+
     </main>
 
     <footer>
