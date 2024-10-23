@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>MindAR Example</title> 
     <link rel="stylesheet" href="styles.css" /> 
-    <!-- <script src="https://cdn.jsdelivr.net/gh/MindAR-js/aframe/dist/aframe-mindar.js"></script> --> 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
- 
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script> 
- 
+
     <style> 
       body { 
         margin: 0; 
         overflow: hidden; /* ป้องกันการเลื่อน */ 
       } 
- 
       #ar-container { 
         position: absolute; 
         top: 0; 
@@ -24,7 +21,6 @@
         height: 100%; 
         z-index: 1; /* ให้แสดงอยู่ด้านบน */ 
       } 
- 
       .exit-button { 
         position: absolute; 
         top: 20px; 
@@ -37,7 +33,6 @@
         cursor: pointer; 
         z-index: 5; /* ทำให้ปุ่มอยู่ด้านบนสุด */ 
       } 
- 
       .exit-button:hover { 
         background-color: #ff1c1c; 
       } 
@@ -49,110 +44,100 @@
       <a-scene mindar-image="imageTargetSrc: ./markers/targets1.mind;" embedded> 
         <!-- กล้อง --> 
         <a-camera></a-camera> 
- 
+
         <!-- โมเดล 3D ที่จะปรากฏเมื่อสแกนภาพ --> 
-        <!-- เพิ่ม Marker และโมเดล AR ตามที่ต้องการ --> 
         <a-entity mindar-image-target="targetIndex: 0"> 
-          <a-entity 
-            gltf-model="model/bkk.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/bkk.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 1"> 
           <a-entity gltf-model="model/BACC.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 2"> 
-          <a-entity 
-            gltf-model="model/sapanputh.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/sapanputh.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 3"> 
-          <a-entity 
-            gltf-model="model/Sao.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/Sao.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 4"> 
-          <a-entity 
-            gltf-model="model/Phukaothong.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/Phukaothong.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 5"> 
-          <a-entity 
-            gltf-model="model/SanamLuang.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/SanamLuang.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
- 
+
         <a-entity mindar-image-target="targetIndex: 6"> 
-          <a-entity 
-            gltf-model="model/Mue.glb" 
-            scale="0.1 0.1 0.1" 
-          ></a-entity> 
+          <a-entity gltf-model="model/Mue.glb" scale="0.1 0.1 0.1"></a-entity> 
+        </a-entity> 
+
+        <!-- เพิ่มโมเดล ท่ามหาราช --> 
+        <a-entity mindar-image-target="targetIndex: 7"> 
+          <a-entity gltf-model="model/Temple.glb" scale="0.1 0.1 0.1"></a-entity> 
+        </a-entity> 
+
+        <!-- เพิ่มโมเดล วัด --> 
+        <a-entity mindar-image-target="targetIndex: 8"> 
+          <a-entity gltf-model="model/Benchakitti.glb" scale="0.1 0.1 0.1"></a-entity> 
+        </a-entity> 
+
+        <!-- เพิ่มโมเดล สวนเบญจกิติ --> 
+        <a-entity mindar-image-target="targetIndex: 9"> 
+          <a-entity gltf-model="model/ThaMaharaj.glb" scale="0.1 0.1 0.1"></a-entity> 
         </a-entity> 
       </a-scene> 
     </div> 
- 
-    <!-- อ้างอิงไฟล์โมเดลและข้อมูลอื่น ๆ --> 
+
     <a-assets> 
-      <a-asset-item 
-        id="bkk-planetarium" 
-        src="model/bkk.glb" 
-      ></a-asset-item> 
+      <a-asset-item id="bkk-planetarium" src="model/bkk.glb"></a-asset-item> 
       <a-asset-item id="BACC" src="model/BACC.glb"></a-asset-item> 
       <a-asset-item id="ภูเขาทอง" src="model/Phukaothong.glb"></a-asset-item> 
-      <a-asset-item 
-        id="มิวเซียมสยามมีสีแล้ว" 
-        src="model/Mue.glb" 
-      ></a-asset-item> 
+      <a-asset-item id="มิวเซียมสยามมีสีแล้ว" src="model/Mue.glb"></a-asset-item> 
       <a-asset-item id="เสาชิงช้า" src="model/Sao.glb"></a-asset-item> 
       <a-asset-item id="SanamLuang" src="model/SanamLuang.glb"></a-asset-item> 
       <a-asset-item id="sapanputh" src="model/sapanputh.glb"></a-asset-item> 
+
+      <!-- อ้างอิงโมเดลสำหรับ ท่ามหาราช, วัด และ สวนเบญจกิติ --> 
+      <a-asset-item id="ThaMaharaj" src="model/ThaMaharaj.glb"></a-asset-item> 
+      <a-asset-item id="Temple" src="model/Temple.glb"></a-asset-item> 
+      <a-asset-item id="Benchakitti" src="model/Benchakitti.glb"></a-asset-item> 
     </a-assets> 
- 
+
     <script> 
       function exitScanner() { 
-    // ซ่อน AR container ก่อนที่จะเปลี่ยนหน้า 
-    const arContainer = document.getElementById("ar-container"); 
-    arContainer.style.display = "none"; // ซ่อน AR container 
-     
-    // เปลี่ยนไปยังหน้าแรก 
-    window.location.assign("index.html"); // หรือใช้ window.location.replace("index.html"); 
-  } 
- 
-  // เพิ่มฟังก์ชันในการเริ่มกล้องเมื่อโหลดหน้า 
-  window.onload = function () { 
-    const arContainer = document.getElementById("ar-container"); 
-    arContainer.style.display = "block"; // แสดง AR container 
-    startScanner(); // เริ่มกล้อง 
-  }; 
- 
-  function startScanner() { 
-    navigator.mediaDevices 
-      .getUserMedia({ video: true }) 
-      .then((stream) => { 
-        const videoElement = document.createElement("video"); 
-        videoElement.srcObject = stream; 
-        videoElement.autoplay = true; 
-        videoElement.style.width = "100%"; 
-        videoElement.style.height = "100%"; 
-        videoElement.style.position = "absolute"; 
-        videoElement.style.top = "0"; 
-        videoElement.style.left = "0"; 
-        videoElement.style.zIndex = "0"; // อยู่ด้านล่าง AR container 
-        document.body.appendChild(videoElement); // เพิ่ม video element ลงใน body 
-      }) 
-      .catch((error) => { 
-        console.error("Error accessing the camera:", error); 
-      }); 
-  } 
+        const arContainer = document.getElementById("ar-container"); 
+        arContainer.style.display = "none"; 
+        window.location.assign("index.html"); 
+      } 
+
+      window.onload = function () { 
+        const arContainer = document.getElementById("ar-container"); 
+        arContainer.style.display = "block"; 
+        startScanner(); 
+      }; 
+
+      function startScanner() { 
+        navigator.mediaDevices 
+          .getUserMedia({ video: true }) 
+          .then((stream) => { 
+            const videoElement = document.createElement("video"); 
+            videoElement.srcObject = stream; 
+            videoElement.autoplay = true; 
+            videoElement.style.width = "100%"; 
+            videoElement.style.height = "100%"; 
+            videoElement.style.position = "absolute"; 
+            videoElement.style.top = "0"; 
+            videoElement.style.left = "0"; 
+            videoElement.style.zIndex = "0"; 
+            document.body.appendChild(videoElement); 
+          }) 
+          .catch((error) => { 
+            console.error("Error accessing the camera:", error); 
+          }); 
+      } 
     </script> 
   </body> 
 </html>
